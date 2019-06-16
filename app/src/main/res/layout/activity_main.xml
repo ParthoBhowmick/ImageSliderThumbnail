@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+<androidx.viewpager.widget.ViewPager
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:background="@drawable/placeholder"
+    android:scaleType="fitXY"
+    android:clipToPadding="false"/>
+
+
+<ImageButton
+    android:id="@+id/left_nav"
+    android:layout_width="30dp"
+    android:layout_height="50dp"
+    android:scaleType="centerInside"
+    android:background="#000"
+    android:src="@drawable/arrow_right"
+    android:padding="5dp"
+    android:layout_marginTop="110dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+
+<ImageButton
+    android:id="@+id/right_nav"
+    android:layout_width="30dp"
+    android:layout_height="50dp"
+    android:background="#000"
+    android:scaleType="centerInside"
+    android:padding="5dp"
+    android:layout_centerVertical="true"
+    android:src="@drawable/arrow_left"
+    android:layout_alignTop="@+id/left_nav"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pager"
+        android:id="@+id/scroller"
+        android:scrollbars="none"
+        android:paddingTop="2dp">
+
+        <LinearLayout
+            android:id="@+id/lastLL"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>
